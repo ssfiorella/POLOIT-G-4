@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reporte de Incidentes</title>
+	<link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+	<main>
+		<form action="URL_DEL_BACKEND" method="POST" class="formulario" id="formulario">
+			<h2>🔐 Reportar Incidente de Seguridad</h2>
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre completo</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ej: Ana Rodríguez" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Por favor ingresa tu nombre completo.</p>
+			</div>
+
+			<!-- Grupo: Correo -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo de contacto</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo debe tener un formato válido.</p>
+			</div>
+
+			<!-- Grupo: Tipo de incidente -->
+			<div class="formulario__grupo" id="grupo__tipo">
+				<label for="tipo" class="formulario__label">Tipo de incidente</label>
+				<div class="formulario__grupo-input">
+					<select class="formulario__input" name="tipo" id="tipo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="internet">🌐 Problemas de Internet</option>
+                        <option value="pc_lenta">💻 PC muy lenta / publicidad extraña</option>
+                        <option value="olvido_contraseña">🔑 Olvidé mi contraseña</option>
+                        <option value="dispositivo_robado">📱 Dispositivo robado o perdido</option>
+                        <option value="correo_sospechoso">📧 Correo sospechoso</option>
+                        <option value="otro">❓ Otro</option>
+					</select>
+				</div>
+				<p class="formulario__input-error">Selecciona una opción válida.</p>
+			</div>
+
+			<!-- Grupo: Descripción -->
+			<div class="formulario__grupo" id="grupo__descripcion">
+				<label for="descripcion" class="formulario__label">Descripción del incidente</label>
+				<div class="formulario__grupo-input">
+					<textarea class="formulario__input" name="descripcion" id="descripcion" rows="4" placeholder="Explica brevemente lo ocurrido..." required></textarea>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La descripción no puede quedar vacía.</p>
+			</div>
+
+			<!-- Grupo: Archivo adjunto -->
+			<div class="formulario__grupo" id="grupo__archivo">
+				<label for="archivo" class="formulario__label">Adjuntar captura de pantalla (opcional)</label>
+				<div class="formulario__grupo-input">
+					<input type="file" class="formulario__input" name="archivo" id="archivo" accept="image/*">
+				</div>
+			</div>
+
+			<!-- Grupo: Terminos -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required>
+					Confirmo que la información proporcionada es verdadera
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor completa el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar Reporte</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Incidente reportado con éxito!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="js/formulario.js"></script>
+</body>
+</html>

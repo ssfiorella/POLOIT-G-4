@@ -1,0 +1,179 @@
+* {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background: #f2f2f2;
+        color: #212529;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    main   {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Formulario */
+    .formulario {
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .formulario h2 {
+        margin-top: 0;
+        text-align: center;
+        color: #0b2d53;
+        font-size: 24px;
+    }
+    
+    /* Grupos de Input */
+    .formulario__grupo {
+        margin-bottom: 25px;
+        position: relative;
+    }
+    
+    .formulario__label {
+        display: block;
+        font-weight: 700;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    
+    /* Inputs, Textarea y Select */
+    .formulario__input {
+        width: 100%;
+        background: #fafdfe;
+        border: 3px solid transparent;
+        border-radius: 3px;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 10px;
+        transition: .3s ease all;
+    }
+    
+    /* Estilo específico para el Select */
+    .formulario__input[name="tipo"] {
+        appearance: none;
+        cursor: pointer;
+    }
+    
+    .formulario__input:focus {
+        border: 3px solid #0b2d53;
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+    }
+    
+    .formulario__input[type="file"] {
+        border: none;
+        background: transparent;
+        padding: 0;
+        height: auto;
+    }
+    
+    /* Estilo específico para el Textarea */
+    .formulario__input[name="descripcion"] {
+        height: auto;
+        padding: 10px;
+        resize: vertical;
+    }
+    
+    /* Iconos de Validación */
+    .formulario__validacion-estado {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 100;
+        font-size: 16px;
+        opacity: 0; /* Oculto por defecto */
+        transition: opacity .3s ease;
+    }
+    
+    /* Mensajes de Error de Campo */
+    .formulario__input-error {
+        font-size: 12px;
+        color: #bb2929;
+        display: none; /* Oculto por defecto */
+    }
+    
+    /* Validación */
+    .formulario__grupo-incorrecto .formulario__label {
+        color: #bb2929;
+    }
+    
+    .formulario__grupo-incorrecto .formulario__input {
+        border: 3px solid #bb2929;
+    }
+    
+    .formulario__grupo-incorrecto .formulario__validacion-estado {
+        color: #bb2929;
+        opacity: 1; /* icono de error */
+    }
+    
+    .formulario__grupo-incorrecto .formulario__input-error {
+        display: block; 
+    }
+    
+    .formulario__grupo-correcto .formulario__validacion-estado {
+        color: #1ed12d;
+        opacity: 1; /* Muestra el icono de éxito */
+    }
+    
+    /* Checkbox Términos */
+    .formulario__checkbox {
+        margin-right: 10px;
+    }
+    
+    /* MSJ de formulario (Error/Éxito) -*/
+    .formulario__mensaje,
+    .formulario__mensaje-exito {
+        display: none; /* Ambos ocultos por defecto */
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    .formulario__mensaje {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+    
+    .formulario__mensaje p {
+        margin: 0;
+    }
+    
+    .formulario__mensaje-exito {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    /* Botón Enviar */
+    .formulario__grupo-btn-enviar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .formulario__btn {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 30px;
+        background: #0b2d53;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color .3s ease;
+}
+    
+    .formulario__btn:hover {
+        background: #1a4170;
+    }
