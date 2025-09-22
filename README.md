@@ -8,8 +8,8 @@ digital cotidianos, aprender buenas prácticar y fortalecer la seguridad.
 
 Características principales
 - SOPORTE
-     -Formulario para que cualquier persona pueda reportar un problema digital común
-     -Los reportes se convierten en un "ticket rápido", lo que facilita el registro
+     - Formulario para que cualquier persona pueda reportar un problema digital común
+     - Los reportes se convierten en un "ticket rápido", lo que facilita el registro
        y seguimiento de las dificultades.
 - CIBERSEGURIDAD APLICADA
      - Recomendaciones concretas para la proteccion digital.
