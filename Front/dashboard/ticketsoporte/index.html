@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Soporte | Administrador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="tickets.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">laptop_windows</span> Administrador
+                </div>
+                <span class="material-icons-outlined close-icon" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="../../dashboard/index.html">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item active">
+                    <a href="index.html">
+                        <span class="material-icons-outlined">forum</span> Tickets de Soporte
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">security</span> Ciberseguridad
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">school</span> Educación Digital
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">groups</span> Comunidad
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#">
+                        <span class="material-icons-outlined">settings</span> Configuración
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-container">
+            <div class="main-title">
+                <h2>Gestión de Tickets de Soporte</h2>
+            </div>
+            
+            <div class="tickets-controls">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar por email o asunto...">
+                </div>
+                <div class="filter-dropdown">
+                    <select>
+                        <option value="all">Todos los estados</option>
+                        <option value="open">Abiertos</option>
+                        <option value="in_progress">En progreso</option>
+                        <option value="resolved">Resueltos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="tickets-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Asunto</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ticket-id="1" data-status="open">
+                            <td>#001</td>
+                            <td>fundacion.empujar@gmail.com</td>
+                            <td>Problema con contraseña</td>
+                            <td><span class="status open">Abierto</span></td>
+                            <td>21/09/2025</td>
+                            <td><button class="view-btn">Ver</button></td>
+                        </tr>
+                        <tr data-ticket-id="2" data-status="resolved">
+                            <td>#002</td>
+                            <td>polo_it@gmail.com</td>
+                            <td>Sospecha de phishing</td>
+                            <td><span class="status resolved">Resuelto</span></td>
+                            <td>20/09/2025</td>
+                            <td><button class="view-btn">Ver</button></td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </main>
+        
+    </div>
+
+    <script src="ticktes.js"></script>
+</body>
+</html>
