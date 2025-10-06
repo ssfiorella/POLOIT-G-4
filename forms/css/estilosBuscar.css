@@ -1,0 +1,201 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+    color: #111;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ICONOS */
+.card-section .header h2 {
+    display: flex;
+    align-items: center;
+}
+.card-section .header h2 .fas {
+    margin-right: 10px;
+    font-size: 22px;
+}
+.card h3 {
+    display: flex;
+    align-items: center;
+}
+.card h3 .fas {
+    margin-right: 8px;
+    color: #0b2d53; 
+}
+
+
+/* Secciones */
+.card-section {
+    background: #0b2d53; /* AZUL MODIFICADO */
+    border-radius: 15px;
+    padding: 20px;
+    color: white; 
+}
+
+/* Encabezados de sección */
+.card-section .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btn-small {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0b2d53;
+}
+
+/* Contenido general */
+.content {
+    display: flex;
+    gap: 20px;
+    background: #e9ecef; 
+    padding: 10px; 
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas pequeñas */
+.item-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    min-width: 120px;
+}
+.item {
+    width: 100%;
+    height: 100%;
+    background: #f2f5fa;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item .fas {
+    font-size: 35px;
+    color: #0b2d53; 
+    margin-bottom: 8px;
+}
+.item p {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+
+/* Tarjetas grandes (checklist, herramientas) */
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #f2f5fa;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #111;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+
+.card ul li a {
+    color: inherit; 
+    text-decoration: none; 
+    display: block; 
+}
+.checklist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px; 
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s ease all;
+}
+.checklist-item:last-child {
+    border-bottom: none;
+}
+.checklist-text {
+    flex-grow: 1;
+    padding-right: 10px;
+}
+.checkmark {
+    color: #ccc;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.checklist-item.completed .checkmark {
+    color: #1ed12d;
+}
+.checklist-item.completed .checklist-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+/* Botones */
+.btn-green {
+    background: #2ecc71;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto; 
+    text-decoration: none;
+}
+
+.main-footer {
+    background-color: #0b2d53;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px; 
+    border-radius: 15px; 
+    font-size: 14px;
+}

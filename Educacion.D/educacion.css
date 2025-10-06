@@ -1,0 +1,137 @@
+:root {
+    --color-primary: #0b2d53; 
+    --color-secondary: #f4f6f9; 
+    --color-text: #333;
+    --color-card-bg: #ffffff;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-green: #2ecc71;
+    --color-red: #e74c3c;
+    --color-icon-inactive: #495057; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    padding-bottom: calc(2rem + 60px); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+    justify-content: center; 
+}
+
+.educational-card {
+    background-color: var(--color-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 15px var(--color-shadow);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    min-height: 250px;
+}
+
+.educational-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.card-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-green); 
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s;
+}
+
+.card-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-1px);
+}
+
+/* Iconos de las tarjetas */
+#card1 .card-icon { color: var(--color-red); } /* Phishing */
+#card2 .card-icon { color: var(--color-primary); } /* IA */
+#card3 .card-icon { color: #2c3e50; } /* Huella Digital */
+
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-card-bg);
+    box-shadow: 0 -2px 10px var(--color-shadow);
+    z-index: 1000;
+    padding: 0 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none;
+    flex-grow: 1; 
+    transition: color 0.3s;
+    height: 100%;
+}
+
+.nav-item i {
+    font-size: 24px; 
+    color: var(--color-icon-inactive) !important; 
+    transition: color 0.3s;
+}
+
+.nav-item.active i {
+    color: var(--color-primary) !important; 
+}
+
+.nav-item:hover i {
+    color: #1a4170 !important; 
+}

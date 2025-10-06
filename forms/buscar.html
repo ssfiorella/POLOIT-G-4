@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Seguro</title>
+    <link rel="stylesheet" href="css/estilosBuscar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <section class="card-section">
+            <div class="header">
+                <h2><i class="fas fa-headset"></i> Soporte</h2>
+                <a href="#"><button class="btn-small">Reportar incidente</button></a>
+            </div>
+            <div class="content">
+                <a href="../Form.S/Form.soporte/index.html" class="item-link">
+                    <div class="item">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <p>Correo<br>Sospechoso</p>
+                    </div>
+                </a>
+                <a href="../Form.S/Form.soporte/index.html" class="item-link">
+                    <div class="item">
+                        <i class="fas fa-wifi"></i>
+                        <p>Problemas de<br>Internet</p>
+                    </div>
+                </a>
+                <a href="../Form.S/Form.soporte/index.html" class="item-link">
+                    <div class="item">
+                        <i class="fas fa-desktop"></i>
+                        <p>PC lenta<br>/publicidad extraña</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <div class="header">
+                <h2><i class="fas fa-shield-alt"></i> Ciberseguridad Aplicada</h2>
+                <a href="../Form.C/index.html"><button class="btn-small">IR</button></a>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h3>Tu checklist de seguridad</h3>
+                    <ul id="checklist-preview">
+                        <li class="checklist-item">
+                            <span class="checklist-text">Revisar y actualizar contraseñas.</span>
+                            <i class="fas fa-check-circle checkmark"></i>
+                        </li>
+                        <li class="checklist-item">
+                            <span class="checklist-text">Activar la verificación de 2 pasos.</span>
+                            <i class="fas fa-check-circle checkmark"></i>
+                        </li>
+                    </ul>
+                    <a href="./Form.C/index.html"><button class="btn-green">Ver más</button></a>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-toolbox"></i> Herramientas de Seguridad</h3>
+                    <ul>
+                        <li><a href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a></li>
+                        <li><a href="https://bitwarden.com/download/" target="_blank">Bitwarden </a></li>
+                        <li><a href="https://www.microsoft.com/es-es/windows/comprehensive-security" target="_blank">Windows Defender </a></li>
+                    </ul>
+                    <a href="./Form.C/index.html"><button class="btn-green">Ver más</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <div class="header">
+                <h2><i class="fas fa-lightbulb"></i> Educación Digital</h2>
+                <a href="../Educacion.D/index.html"><button class="btn-small">IR</button></a>
+            </div>
+            <div class="content">
+                <a href="https://sosafe-awareness.com/es/juego-de-phishing/" class="item-link">
+                    <div class="item">
+                        <p>Juego: ¿Es phishing o no?</p>
+                        <button class="btn-green">IR</button>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/watch?v=CUxxV-v0rYg&list=LL&index=7" class="item-link">
+                    <div class="item">
+                        <p>¿Estás dejando un rastro digital? Aprende a proteger tu huella.</p>
+                        <button class="btn-green">IR</button>
+                    </div>
+                </a>
+                <a href="https://www.safetica.com/es/recursos/blogs/el-dilema-de-la-ia-generativa-como-equilibrar-innovacion-y-seguridad-de-datos" class="item-link">
+                    <div class="item">
+                        <p>¿Cómo usar herramientas de Inteligencia Artificial sin poner en riesgo la información sensible?</p>
+                        <button class="btn-green">IR</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <p>&copy; ©2025 Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checklistItems = document.querySelectorAll('.checklist-item');
+
+            checklistItems.forEach(item => {
+                const checkmark = item.querySelector('.checkmark');
+                checkmark.addEventListener('click', () => {
+                    item.classList.toggle('completed');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
